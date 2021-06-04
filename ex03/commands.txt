@@ -1,0 +1,3 @@
+sed 's/Corbeau/chat/' leCorbeauEtLeRenard.txt
+sed 's/Corbeau/Lolita/' leCorbeauEtLeRenard.txt
+
