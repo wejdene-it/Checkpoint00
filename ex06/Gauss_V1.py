@@ -1,11 +1,32 @@
-def Gauss():
-     R1 = input("Bonjour, connaissez vous la legende du petit Gauss?\nOui / Non\n")
-        if(R1=="oui"):
-            R2=  input("Super !\n Ok, bon laissez moi tout de même vous la raconter.\n Le petit Carl Friedrich Gauss était un peu dissipé en classe.\n Le maitre agacé, par l'agitation de sa classe décida,\nde calmer sa classe à coup d'interrogation surprise.\n Comme tout bon institeur qui se respecte !\n Cela vous offusque ?\n Oui / Non")
-                if(R2=="oui"):
-                    print("manger une pomme c'est bon la santé")
-                 else:   
-                     print("")
-          else:
-              print("google est votre, ou demander à Igor.\n Ok, bon laissez moi tout de même vous la raconter.\n Le petit Carl Friedrich Gauss était un peu dissipé en classe.\n Le maitre agacé, par l'agitation de sa classe décida,\nde calmer sa classe à coup d'interrogation surprise.\n Comme tout bon institeur qui se respecte !\n Cela vous offusque ?\n Oui / Non")
+hist = "Ok, bon laissez moi tout de même vous la raconter.\n\nLe petit Carl Friedrich Gauss était un peu dissipé en classe.\n\nLe maître agacé, par l'agitation de sa classe décida,\n\n de calmer sa classe à coup d'interrogation surprise.\n\nComme tout bon instituteur qui se respecte !\n\n"
+hist2 ="Très écoutez attentivement la suite.\n\nL'instituteur posa le problème suivant :\n\nQue vaut la somme de tous les nombre de 1 à 100 ?\n\nL'instituteur pensant avoir un long moment de répit,\n\nentendit la petite voix de Carl dire timidement '5050...'\n\nStupéfait de l'exactitude du résultat, il lui donna une autre punition à accomplir...\n\nLa dernière ligne est purement fictive.\n"
+hs = 0
 
+quest1 = input("Bonjour, connaissez vous la légende du petit Gauss ?\n\nOui / Non\n\n")
+
+if (quest1 == "Oui" or quest1 == "oui") :
+  print (f"Super !\n\n{hist}")
+  quest2 = input("Cela vous offusque ?\n\nOui / Non\n\n")
+
+elif (quest1 == "Non" or quest1 == "non") :
+  print (f"Google est vôtre ami, ou demandez à Igor.\n{hist}")
+  quest2 = input("Cela vous offusque ?\n\nOui / Non\n\n")
+
+else : 
+  hs = 1
+  print (f"Oui ou Non, c'etait plus simple comme choix de réponse ...\n\n{hist}")
+  quest2 = input("Cela vous offusque ?\n\nOui / Non\n\n")
+
+if (quest2 == "Oui" or quest2 == "oui") :
+  print ("Mangez une pomme c'est bon pour la santé ...\n\nElle est loin l'époque ou l'on pouvait mettre des fessées ...")
+
+elif (quest2 == "Non" or quest2 == "non") :
+  print (hist2)
+
+else :
+  if hs != 0 :
+    print (f"Oui ou Non, c'etait plus simple comme choix de réponse ...\n\n")
+    print ("C'est la deuxième fois que vous ne répondez pas.\n\nVous me prenez pour un imbécile à répondre à côté de la plaque, au revoir !")
+  else : 
+    print (f"Oui ou Non, c'etait plus simple comme choix de réponse ...\n\n")
+    print (hist2)
